@@ -1,10 +1,13 @@
-import React from 'react'
-import { useStyles } from '../styles'
+import React from 'react';
+import { useStyles } from '../styles';
 
-export default function Logo() {
-
-    const styles = useStyles();
+export default function Logo(props) {
+  const styles = useStyles();
   return (
-    <img src = "/images/coff.jpg" alt = "Food Order" className={styles.largeLogo}></img>
-  )
+    <img
+      src="/images/logo.png"
+      alt="Food Order"
+      className={props.large ? styles.largeLogo : styles.logo}
+    ></img>
+  );
 }
